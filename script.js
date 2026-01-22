@@ -1,5 +1,5 @@
 
-const apiKey = "67f420cbb95ae7d00dd79c5fe7bdb258";
+const apiKey = "Your-api-key-here";
 
 const loader = document.getElementById("loader");
 const bg = document.getElementById("bg");
