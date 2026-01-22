@@ -538,7 +538,7 @@ body {
 }
 
 .forecast-card {
-  min-width: 200px;              /* ⬅ bigger cards */
+  min-width: 200px;              
   padding: 18px;
   border-radius: 18px;
   background: rgba(255,255,255,0.22);
@@ -572,7 +572,7 @@ body {
 }
 
 .forecast-temp {
-  font-size: 1.25rem;            /* ⬆ temp text */
+  font-size: 1.25rem;            
   font-weight: 600;
 }
 
@@ -597,7 +597,7 @@ body {
 
 @media (max-width: 600px) {
   .forecast-card {
-    min-width: 70%;   /* feels full-width when swiping */
+    min-width: 70%;  
   }
 }
 
