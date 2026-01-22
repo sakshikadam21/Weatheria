@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weatheria – Fresh Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-animation" id="bg"></div>
+    <div class="app" id="app">
+      <div class="title-gif">
+        <div class="gif-glow">
+          <img src="assets/c9b753f20af3c67d1dfbb271700d0661.gif" />
+        </div>
+      </div>
+
+      <h1 class="title">Weatheria</h1>
+      <p class="subtitle">Your Personal Real-Time Weather Companion</p>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Search city" />
+        <button onclick="searchCity()">Search</button>
+        <button onclick="useMyLocation()">📍 Use My Location</button>
+      </div>
+      <div class="loader" id="loader"></div>
+      <div id="mainWeather"></div>
+      <h2>🌍 Popular Cities</h2>
+      <div class="scroll-row" id="cityScroll"></div>
+      <h2>🕒 Recent Searches</h2>
+      <div class="scroll-row" id="recentScroll"></div>
+      <h2 class="section-title">❤️ Favorite Cities</h2>
+      <div id="favScroll" class="scroll-row"></div>
+
+      <h2 class="section-title">📅 5-Day Forecast</h2>
+      <div id="forecast5" class="forecast-row"></div>
+    </div>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>
