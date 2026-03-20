@@ -290,17 +290,7 @@ body {
 }
 
 /* ================= CITY CARD ================= */
-.city-card {
-  min-width: 160px;
-  padding: 15px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.2);
-  cursor: pointer;
-  transition: 0.3s;
-  text-align: center;
-  animation: floatCard 4s ease-in-out infinite;
-}
+
 
 .city-card:hover {
   transform: translateY(-10px) scale(1.05);
@@ -538,7 +528,7 @@ body {
 }
 
 .forecast-card {
-  min-width: 200px;              
+  min-width: 200px;              /* ⬅ bigger cards */
   padding: 18px;
   border-radius: 18px;
   background: rgba(255,255,255,0.22);
@@ -572,7 +562,7 @@ body {
 }
 
 .forecast-temp {
-  font-size: 1.25rem;            
+  font-size: 1.25rem;            /* ⬆ temp text */
   font-weight: 600;
 }
 
@@ -597,7 +587,7 @@ body {
 
 @media (max-width: 600px) {
   .forecast-card {
-    min-width: 70%;  
+    min-width: 70%;   /* feels full-width when swiping */
   }
 }
 
@@ -655,4 +645,230 @@ body {
 .rain,
 .cloud-layer {
   pointer-events: none;
+}
+
+
+
+
+
+/* ================= MOBILE FIX (FINAL) ================= */
+@media (max-width: 600px) {
+
+  /* App padding */
+  .app {
+    padding: 16px;
+  }
+
+  /* Main weather card */
+  .big-card {
+    max-width: 100%;
+    padding: 16px;
+    margin-top: 16px;
+  }
+
+  /* Weather emoji */
+  .floating-emoji {
+    font-size: 48px;
+    margin: 6px 0;
+  }
+
+  /* Temperature */
+  .temp {
+    font-size: 36px;
+  }
+
+  /* Sunrise / Sunset bar */
+  .sun-bar-wrapper {
+    gap: 6px;
+    margin: 10px 0;
+  }
+
+  /* Info grid (Humidity, Wind, etc.) */
+  .glow-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .glow-box {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  /* AQI box */
+  #aqiBox {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  /* Popular / Recent / Favorite cards */
+  .city-card {
+    min-width: 140px;
+    padding: 12px;
+  }
+
+  /* Forecast section */
+  .forecast-row {
+    gap: 14px;
+    padding: 10px 0;
+  }
+
+  .forecast-card {
+    min-width: 160px;
+    padding: 14px;
+  }
+
+  .forecast-emoji {
+    font-size: 30px;
+  }
+
+  .forecast-temp {
+    font-size: 1.1rem;
+  }
+
+  /* Reduce section spacing */
+  .section-title,
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Title */
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* ================= UNIVERSAL MOBILE FIX ================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Fix main container */
+.app{
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Fix main weather container */
+#mainWeather{
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
+
+/* Big Weather Card */
+.big-card{
+  width:100%;
+  max-width:380px;
+  margin:20px auto;
+  box-sizing:border-box;
+}
+
+
+
+.city-card{
+  min-width:130px;
+  max-width:140px;
+  padding:15px;
+  border-radius:18px;
+
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.22);
+
+  cursor:pointer;
+  transition:.25s;
+
+  text-align:center;
+  animation: floatCard 4s ease-in-out infinite;
+  flex-shrink:0;   /* prevents stretching */
+}
+
+
+
+
+
+
+
+.city-card h4{
+  font-size:0.9rem;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+/* Scroll rows smooth */
+.scroll-row{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding:10px 0;
+}
+
+/* Search box mobile fix */
+.search-box{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.search-box input{
+  width:200px;
+  max-width:70%;
+}
+
+/* Forecast cards fix */
+.forecast-card{
+  min-width:150px;
+  flex-shrink:0;
+}
+
+/* Prevent overflow */
+img{
+  max-width:100%;
+}
+
+/* ================= SMALL SCREEN FIX ================= */
+
+@media (max-width:480px){
+
+  .title{
+    font-size:1.8rem;
+  }
+
+  .subtitle{
+    font-size:0.85rem;
+  }
+
+  .big-card{
+    padding:16px;
+  }
+
+  .temp{
+    font-size:34px;
+  }
+
+  .floating-emoji{
+    font-size:46px;
+  }
+
+  .city-card{
+    min-width:120px;
+    padding:10px;
+  }
+
+  .forecast-card{
+    min-width:140px;
+    padding:12px;
+  }
+
 }
