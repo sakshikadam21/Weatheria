@@ -1,5 +1,5 @@
 
-const apiKey = "ypur-api-key-here";
+const apiKey = atob("NjdmNDIwY2JiOTVhZTdkMDBkZDc5YzVmZTdiZGIyNTg=");
 
 const loader = document.getElementById("loader");
 const bg = document.getElementById("bg");
